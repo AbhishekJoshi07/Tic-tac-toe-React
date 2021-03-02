@@ -128,31 +128,33 @@ class Game extends React.Component {
     const gameStatus = getGameStatus(winner, isXNext, stepNumber, this.player1Name, this.player2Name);
 
     return (
-      <>
+      <div className='game-container'>
         {isOpponentDecided ? (
           <>
-            <div className='flex'>
+            <div className='players-score'>
               <div className='p1'>{this.player1Name} points: {player1WinCount*10}</div>              
               <div className='p2'>{this.player2Name} points: {player2WinCount*10}</div>
             </div>
             
-            <div className="game-header">{gameStatus}</div>
+            <div>
+              <div className="game-status">{gameStatus}</div>
 
-            <Board squares={squares} onClick={this.handleClick} />
+              <Board squares={squares} onClick={this.handleClick} />
 
-            <div className="button-container">
-              <button className="btn margin-right" onClick={this.restartGame}>
-                Restart
-              </button>
-              <button className="btn" onClick={this.resetGame}>
-                Reset
-              </button>
-            </div>
+              <div>
+                <button className="btn margin-right" onClick={this.restartGame}>
+                  Restart
+                </button>
+                <button className="btn" onClick={this.resetGame}>
+                  Reset
+                </button>
+              </div>
+            </div>            
           </>
         ) : (
           <>
-            <div className="game-header">Tic Tac Toe</div>
-            <div  className="button-container">
+            <div className="game-name color-tomato">Tic Tac Toe</div>
+            <div className="players-btn">
               <button className="btn margin-right" onClick={() => this.decideOpponent(COMPUTER)}>
                 1 Player
               </button>
@@ -173,7 +175,7 @@ class Game extends React.Component {
             title="about Abhishek Joshi">Abhishek Joshi
           </a>
         </footer>
-      </>
+      </div>
     );
   }
 }
