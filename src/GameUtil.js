@@ -42,7 +42,7 @@ export function getGameStatus(winner, isXNext, stepNumber, player1Name, player2N
   } else if (stepNumber < 9) {
     return (
       <div className={isXNext ? clrTomato : clrLightBlue}>
-        Next player: {isXNext ? player1Name : player2Name}
+        {isXNext ? player1Name : player2Name} turn
       </div>
     );
   } else {

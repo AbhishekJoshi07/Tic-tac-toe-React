@@ -132,10 +132,11 @@ class Game extends React.Component {
         {isOpponentDecided ? (
           <>
             <div className='flex'>
-              <div className='p1'>{this.player1Name} points: {player1WinCount*10}</div>
-              <div className="game-header">{gameStatus}</div>
+              <div className='p1'>{this.player1Name} points: {player1WinCount*10}</div>              
               <div className='p2'>{this.player2Name} points: {player2WinCount*10}</div>
             </div>
+            
+            <div className="game-header">{gameStatus}</div>
 
             <Board squares={squares} onClick={this.handleClick} />
 
@@ -163,7 +164,7 @@ class Game extends React.Component {
         )}
         <footer>
           {'coded with '}
-          <span class="love">&#9829;</span>{' by '}
+          <span className="love">&#9829;</span>{' by '}
           <a
             href="https://github.com/AbhishekJoshi07"
             rel="noreferrer"

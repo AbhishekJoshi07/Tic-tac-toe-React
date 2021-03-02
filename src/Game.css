@@ -1,7 +1,6 @@
 body {
-  margin: 20px;
   background-color: #f7f5f5;
-  font-family: 'Indie Flower', 'Comic Sans', cursive;
+  font-family: 'Comic Sans', cursive;
 }
 
 .flex {
@@ -10,21 +9,10 @@ body {
   justify-content: space-between;
 }
 
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
-}
-
-button.margin-right {
-  margin-right: 40px;
-}
-
 .game-header {
-  display: flex;
-  justify-content: center;
-  font-size: 35px;
-  margin: 50px 0 15px;
+  font-size: 25px;
+  margin-top: 2%;
+  margin-bottom: 60px;
   color: tomato;
   text-align: center;
 }
@@ -58,27 +46,34 @@ button.margin-right {
   cursor: pointer;
 }
 
-.X,
-.O {
-  font-size: 55px;
+.X, .O {
+  font-size: 45px;
   position: absolute;
   animation-name: animateIn;
   animation-duration: 450ms;
 }
 
-.X,
-.color-tomato {
+.X, .color-tomato {
   color: tomato;
 }
 
-.O,
-.color-light-blue {
+.O, .color-light-blue {
   color: #33dbff;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+button.margin-right {
+  margin-right: 40px;
 }
 
 .btn {
   font-family: 'Indie Flower', 'Comic Sans', cursive;
-  font-size: 20px;
+  font-size: 18px;
   color: white;
   background-color: tomato;
   border: 1px solid tomato;
@@ -87,8 +82,7 @@ button.margin-right {
   border-radius: 15px;
 }
 
-.btn:hover,
-.btn:focus {
+.btn:hover, .btn:focus {
   cursor: pointer;
   color: white;
   background-color: #f2583d;
@@ -105,22 +99,20 @@ button.margin-right {
   transform: translateY(4px);
 }
 
-.p1,
-.p2 {
+.p1, .p2 {
   /* font-family: 'Montserrat', sans-serif; */
   font-size: 20px;
-  margin: 20px 50px 0 50px;
   margin-top: 20px;
 }
 
 .p1 {
   color: tomato;
-  margin-left: 60px;
+  margin-left: 5%;
 }
 
 .p2 {
   color: #33DBFF;
-  margin-right: 60px;
+  margin-right: 5%;
 }
 
 @keyframes animateIn {
@@ -144,8 +136,7 @@ footer {
   z-index: 999;
 }
 
-footer a:link,
-footer a:visited {
+footer a:link, footer a:visited {
   text-decoration: none;
   color: inherit;
   transition: color 0.5s ease;
@@ -159,4 +150,31 @@ footer .love {
   color: #b10;
   font-size: 16px;
   vertical-align: baseline;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+  .game-header {
+    margin-top: 30%;
+    font-size: 20px;
+  }
+
+  .game-board {
+    width: 175px;
+    height: 175px;
+  }
+
+  .X, .O {
+    font-size: 30px;
+  }
+
+  .p1, .p2 {
+    font-size: 17px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 7px 15px;
+  }
 }
