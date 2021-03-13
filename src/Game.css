@@ -160,6 +160,10 @@ footer .love {
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
 
+  .game-container {
+    height: 92vh;
+  }
+
   .game-name {
     margin-top: 15%;
     font-size: 30px;
@@ -192,7 +196,7 @@ footer .love {
   }
 
   footer .love {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .square:hover {
