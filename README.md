@@ -2,6 +2,8 @@
 
 [Live Demo](https://abhishekjoshi07.github.io/Tic-tac-toe-React).
 
+This is a simple react single page application where the user can play a tic-tac-toe game either with the computer(1 player mode) or with his partner(2 players mode).
+
 ## Available Scripts
 
 In the project directory, you can run:
